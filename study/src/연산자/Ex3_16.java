@@ -1,7 +1,7 @@
 class Ex3_16 {
 	public static void main(String[] args) { 
 		boolean b = true; 
-		char ch = 'C';// À¯´ÏÄÚµå 67
+		char ch = 'C';// ìœ ë‹ˆì½”ë“œ 67
 		
 		System.out.printf("b=%b%n", b);// -> b=true
 		System.out.printf("!b=%b%n", !b);// -> !b=false
@@ -9,11 +9,11 @@ class Ex3_16 {
 		System.out.printf("!!!b=%b%n", !!!b);// -> !!!b=false
 		System.out.println();
 		
-		// 'a'´Â À¯´ÏÄÚµå 97
+		// 'a'ëŠ” ìœ ë‹ˆì½”ë“œ 97
 		System.out.printf("ch=%c%n", ch);// -> ch=C
 		System.out.printf("ch < 'a' || ch > 'z'=%b%n", ch < 'a' || ch > 'z');// -> ch < 'a' || ch > 'z'=true
 	  	System.out.printf("!('a'<=ch && ch<='z')=%b%n", !('a'<= ch && ch<='z'));// -> !('a'<=ch && ch<='z')=true 
-	  	// -> ¿ø·¡´Â false ÀÌÁö¸¸ !ºÎÁ¤ ¿¬»êÀÚ ¶§¹®¿¡ true Ãâ·Â
+	  	// -> ì›ë˜ëŠ” false ì´ì§€ë§Œ !ë¶€ì • ì—°ì‚°ì ë•Œë¬¸ì— true ì¶œë ¥
 	    System.out.printf("  'a'<=ch && ch<='z' =%b%n", 'a'<=ch && ch<='z');// ->   'a'<=ch && ch<='z' =false
-	} // mainÀÇ ³¡
+	} // mainì˜ ë
 }
