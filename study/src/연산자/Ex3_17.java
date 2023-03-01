@@ -8,10 +8,10 @@ class Ex3_17 {
 		y = -5;
 		z = 0;
 
-		absX = x >= 0 ? x : -x;  // xÀÇ °ªÀÌ À½¼öÀÌ¸é, ¾ç¼ö·Î ¸¸µç´Ù. -> true ( absX = x )
+		absX = x >= 0 ? x : -x;  // xì˜ ê°’ì´ ìŒìˆ˜ì´ë©´, ì–‘ìˆ˜ë¡œ ë§Œë“ ë‹¤. -> true ( absX = x )
 		absY = y >= 0 ? y : -y; // -> false ( absY = -y )
 		absZ = z >= 0 ? z : -z; // -> true ( absZ = z )
-		signX = x > 0 ? '+' : ( x==0 ? ' ' : '-');  // Á¶°Ç ¿¬»êÀÚ¸¦ ÁßÃ¸ -> true ( signX = '+' )
+		signX = x > 0 ? '+' : ( x==0 ? ' ' : '-');  // ì¡°ê±´ ì—°ì‚°ìžë¥¼ ì¤‘ì²© -> true ( signX = '+' )
 		signY = y > 0 ? '+' : ( y==0 ? ' ' : '-'); // -> false ( y==0 ? ' ' : '-')  -> false ( signY = '-' )
 		signZ = z > 0 ? '+' : ( z==0 ? ' ' : '-'); // -> false ( z==0 ? ' ' : '-') -> true ( signZ = ' ' )
 
