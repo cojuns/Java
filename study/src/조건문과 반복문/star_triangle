@@ -1,0 +1,17 @@
+import java.util.*;
+
+class Ex4_11 {
+	public static void main(String[] args) { // 별* 삼각형 모양 찍기
+		
+		// i랑 j랑 증가 값이 동일하게 만들면 됨 
+		
+		// i=1,2,3,4,5 5번 {}안의 내용을 반복
+		for (int i=1; i<=5; i++) { // i가 행
+			for (int j=1; j<=i; j++) {	// -> j가 열 ( j<=i로만 변경 해주면 됨 )
+				//기존에 있던 j<=10에 10은 상수
+				System.out.print("*"); // 가로로 10개 출력 
+		}
+			System.out.println(); // 10개를 찍고 줄바꿈
+		}
+	} // main의 끝
+}
