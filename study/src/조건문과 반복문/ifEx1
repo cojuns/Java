@@ -1,0 +1,19 @@
+//class Ex4_2 {
+//	public static void main(String[] args) { 
+//		int x = 0;
+//		System.out.printf("x=%d 일 때, 참인 것은%n", x);
+//
+//		if(x==0) System.out.println("x==0");// -> 0==0 true 해당 값 출력
+//		if(x!=0) System.out.println("x!=0");// -> 0!=0 false
+//		if(!(x==0)) System.out.println("!(x==0)");// -> !(0==0) true -> false
+//		if(!(x!=0)) System.out.println("!(x!=0)");// -> !(0!=0) false -> true 해당 값 출력
+//
+//		x = 1;
+//		System.out.printf("x=%d 일 때, 참인 것은%n", x);
+//
+//		if(x==0) System.out.println("x==0");// -> 1==0 false
+//		if(x!=0) System.out.println("x!=0");// -> 1!=0 true 해당 값 출력
+//		if(!(x==0)) System.out.println("!(x==0)");// -> !(1==0) false -> true 해당 값 출력
+//		if(!(x!=0)) System.out.println("!(x!=0)");// -> !(1!=0) true -> false
+//	}
+//}
