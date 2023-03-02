@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+class Ex4_6 {
+	public static void main(String[] args) { 
+		System.out.print("현재 월을 입력하세요.>");
+
+		Scanner scanner = new Scanner(System.in);
+		int month = scanner.nextInt();  // 화면을 통해 입력받은 숫자를 month에 저장
+
+		switch(month) {
+			case 3: 
+			case 4: 
+			case 5:
+				System.out.println("현재의 계절은 봄입니다.");
+				break; 
+				//-> 해당 break문 없을시 3을 입력하면 현재의 계절은 봄입니다. 현재의 계절은 여름입니다. 같이 출력 됨 
+				//   여름 break에서 멈추기 떄문에 여름 println도 같이 실행 됨 
+			case 6: case 7: case 8: //-> 보통 같은 case 값은 왼쪽처럼 한 줄로 작성 
+				System.out.println("현재의 계절은 여름입니다.");
+				break;
+			case 9: case 10: case 11:
+				System.out.println("현재의 계절은 가을입니다.");
+				break;
+			default:
+	//		case 12:	case 1: case 2: 
+				// -> 12월, 1월, 2월을 주석처리( 1,2,3 입력 시 일치하는 case가 없으므로 default까지 이동 후 맨 밑에 겨울 출력 )
+				System.out.println("현재의 계절은 겨울입니다.");
+		}
+	} // main의 끝
+}
