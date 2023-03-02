@@ -1,0 +1,40 @@
+
+//class Ex4_8 {
+//	public static void main(String args[]) { // i랑 j는 타입이 같아야됨 int
+//		for (int i = 1, j=10; i <= 10; i++, j--) {// i는 1씩 증가, j는 1씩 마이너스 
+//			System.out.println("i="+i+",j="+j);// 
+//			// 변수 i랑 j는 for문 안에서만 사용 가능
+//		}
+//	}
+//}
+
+
+//class Ex4_8 {
+//	public static void main(String args[]) {//i scope시작
+//		int i;// 변수의 scope(범위) 좁을수록 좋다. 선언위치부터 선언된 블럭의 끝까지 
+//		
+//		for (i = 1;  i <= 10; i++) {
+//			System.out.println(i);
+//			
+//		}
+//	}// <- i scope끝
+//}
+
+
+class Ex4_8 {
+	public static void main(String[] args) { 
+		int sum = 0;	// 합계를 저장하기 위한 변수.
+		
+//		sum += 1;
+//		sum += 2;
+//		sum += 3;
+//		sum += 4;
+//		sum += 5;
+		
+		for(int i=1; i <= 5; i++) { // i가 5가 될때까지 1씩 증가되며 반복
+			sum += i ;	// sum = sum + i; 
+			//-> sum은 i가 1,2,3,4,5 증가 될 때 sum의 값을 1+2=3+3=6+4=10+5=15
+			System.out.printf("1부터 %2d 까지의 합: %2d%n", i, sum);
+		}
+	} // main의 끝
+}
