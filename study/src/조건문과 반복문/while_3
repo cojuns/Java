@@ -1,0 +1,38 @@
+import java.util.*;
+
+class Ex4_14 {
+	public static void main(String[] args) { 
+		//while문 예제
+		int num = 0, sum = 0;
+		System.out.print("숫자를 입력하세요.(예:12345)>");
+
+		Scanner scanner = new Scanner(System.in);
+		
+		String tmp = scanner.nextLine();  // 화면을 통해 입력받은 내용을 tmp에 저장
+		// -> String tmp = "12345"; 입력 받은 문자열 "12345" tmp 저장
+		
+		num = Integer.parseInt(tmp);      // 입력받은 문자열(tmp)을 숫자로 변환
+		// -> 12345 = Integer.parseInt("12345"); 문자열을  Integer.parseInt 사용해 숫자로 변환
+		
+		while(num!=0) {   // -> while(12345!=0)
+			// num을 10으로 나눈 나머지를 sum에 더함
+			// 10으로 나머지 연산을 하면 마지막 자리를 얻는다.
+			sum += num%10; 	// sum = sum + num%10; -> 0 = 0 + 12345%10=5
+			System.out.printf("sum=%3d num=%d%n", sum, num);
+
+			num /= 10;   // num = num / 10;  num을 10으로 나눈 값을 다시 num에 저장 (증감식) 
+		}
+
+		System.out.println("각 자리수의 합:"+sum);
+    
+       }
+    }
+    
+    		//while문 과정 : 반복문 실행 할때 반복문이 잘 안돌거나 실행이 안될때 값의 변화 과정 확인할 것 
+		int num = 12345, sum = 0;
+		
+		while(num>0) {
+			sum += num %10;
+			System.out.println("sum="+sum + ",num%10="+num%10);
+			num = num / 10;
+		}
