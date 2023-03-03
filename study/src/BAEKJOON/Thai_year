@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class AB{ 
+	public static void main(String args[]){
+		
+		Scanner sc = new Scanner(System.in);
+		
+	    int year = sc.nextInt(); // 태국 나이
+		System.out.println(year - 543);// 2541-1998=543
+
+	    
+	}
+}
+
