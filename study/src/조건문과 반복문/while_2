@@ -7,5 +7,5 @@ class Ex4_13 {
 			System.out.printf("%d - %d%n", i, sum);
 			sum += ++i;
 		}
-	} // main의 끝
+	} /// main의 끝
 }
