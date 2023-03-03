@@ -13,7 +13,7 @@ public class AB{
 //		System.out.println(a / b);
 //		System.out.println(a % b);
 		
-		
+//
 	    // 1008번 문제 
 		double a = sc.nextInt();// float은 7자리 까지만 표현 가능
 	    double b = sc.nextInt();// 해당 문제 상대오차가 10-9 이하
