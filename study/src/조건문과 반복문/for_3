@@ -1,0 +1,17 @@
+		// for문 예제
+		int num = 12345, sum = 0;
+		
+		// 10으로 나머지 연산을 하면 마지막 자리를 얻는다.
+//		System.out.println(num%10);
+		
+		// num이 0보다 클때 까지 num / 10 진행 (num = 12345, 1234, 123, 12, 1)
+		for (num=12345;num>0;num = num /10) {
+			System.out.println(num%10);// 12345, 1234, 123, 12, 1 나머지
+			// 5 4 3 2 1 츌력
+			
+			sum += num %10;
+			// sum = sum + num%10(5,4,3,2,1)모두 합친 값
+		}
+		System.out.println("각 자리수의 합:"+sum);
+	}
+}
