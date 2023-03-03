@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class AB{ 
+	public static void main(String args[]){
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String laststring = "??!"; // 아이디 뒤에 붙여줄 변수, 문자열 선언
+		
+	    String s = sc.next(); // 입력 받을 곳 String 변수 선언
+		System.out.println(s + laststring);
+
+	    
+	}
+}
+
