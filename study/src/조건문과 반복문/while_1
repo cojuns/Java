@@ -1,0 +1,9 @@
+class Ex4_12 {
+	public static void main(String[] args) { 
+		int i= 5; // 반복할 횟수 지정
+
+		while(i--!=0) {// i가 0이 될때까지 -1씩하면서 반복
+			System.out.println(i + " - I can do it.");
+		}
+	} // main의 끝
+}
