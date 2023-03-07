@@ -1,0 +1,17 @@
+import java.util.*;
+
+class Ex4_11 {
+	public static void main(String[] args) { // 별* 삼각형 모양 찍기
+		// 		index    01234
+		String str = "ABCDE";
+		char ch = str.charAt(2);// -> 해당 위치에 있는 문자를 반환 ('C'출력)
+		String str2 = str.substring(1,4);// to는 포함 안되니까 ("BCD"출력)
+		String str3 = str.substring(1);// to를 생략하면 ("BCDE" 1~4까지 출력)
+		String str4 = str.substring(1, str.length());// 문자열의 길이 반환 ("BCDE"출력) 
+		System.out.println(str4); 
+		
+		
+		
+		
+	} // main의 끝
+}
