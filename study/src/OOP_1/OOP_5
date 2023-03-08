@@ -1,0 +1,20 @@
+// 한 파일에 여러 클래스 작성
+// 되도록이면 하나의 소스파일에는 하나의 클래스만 작성하는 것이 바람직
+
+// 올바른 작성 예
+//public class Hello2 {} // 소스파일 이름과 public class이름과 일치
+//class Hello3{}
+
+//class Hello2{} // public class가 하나도 없는 경우
+//class Hello3{} // 소스파일의 이름은 둘 중 아무거나 가능
+
+
+// 잘못된 작성 예
+//public class Hello2 {}// 하나의 소스파일에 
+//public class Hello3 {}// 둘 이상의 public class가 존재하면 안됨
+
+//class Hello2 {} // 소스파일의 이름이 
+//public class Hello3 {}// public class의 이름과 일치하지 않는다
+
+//public class hello2 {} // 대소문자를 구분하므로 
+//class Hello3 {} // 소스파일 이름과 public class 이름 대소문자 동일하게
