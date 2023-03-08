@@ -1,0 +1,42 @@
+class Ex6_3 {
+	public static void main(String args[]) {
+		System.out.println("Card.width = " + Card.width);  //cv 객체생성없이 사용가능
+		System.out.println("Card.height = " + Card.height);//cv 객체생성없이 사용가능
+
+		Card c1 = new Card(); // iv 객체생성
+		c1.kind = "Heart"; // iv 값
+		c1.number = 7; // iv 값
+
+		Card c2 = new Card(); // iv 객체생성
+		c2.kind = "Spade"; // iv 값
+		c2.number = 4; // iv 값
+
+		System.out.println("c1은 " + c1.kind + ", " + c1.number + "이며, 크기는 (" + c1.width + ", " + c1.height + ")");
+		System.out.println("c2는 " + c2.kind + ", " + c2.number + "이며, 크기는 (" + c2.width + ", " + c2.height + ")");
+		System.out.println("c1의 width와 height를 각각 50, 80으로 변경합니다.");
+		
+		//cv : c1값과 c2값이 같이 바뀜
+		c1.width = 50; // iv로 오해할수 있으니 Card.width = 50; 앞에 클래스이름으로 만드는게 바람직
+		c1.height = 80;// iv로 오해할수 있으니 Card.width = 80; 앞에 클래스이름으로 만드는게 바람직
+
+		System.out.println("c1은 " + c1.kind + ", " + c1.number + "이며, 크기는 (" + c1.width + ", " + c1.height + ")");
+		System.out.println("c2는 " + c2.kind + ", " + c2.number + "이며, 크기는 (" + c2.width + ", " + c2.height + ")");
+	}
+}
+
+class Card {
+	String kind;
+	int number;
+	static int width = 100; // cv 값
+	static int height = 250;// cv 값
+}
+
+//결과
+
+//Card.width = 100
+//Card.height = 250
+//c1은 Heart, 7이며, 크기는 (100, 250)
+//c2는 Spade, 4이며, 크기는 (100, 250)
+//c1의 width와 height를 각각 50, 80으로 변경합니다.
+//c1은 Heart, 7이며, 크기는 (50, 80)
+//c2는 Spade, 4이며, 크기는 (50, 80)
