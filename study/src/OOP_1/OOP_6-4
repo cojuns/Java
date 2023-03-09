@@ -1,0 +1,47 @@
+class Ex6_4 {
+	public static void main(String args[]) {
+		MyMath mm = new MyMath(); // 2.MyMath 객체생성
+		long result1 = mm.add(5L, 3L); // 3.MyMath객체사용 ( 객체의 메서드 호출 )/ 7. 8로 바뀜
+		long result2 = mm.subtract(5L, 3L);
+		long result3 = mm.multiply(5L, 3L);// L=long 생략 가능
+		double result4 = mm.divide(5L, 3L);
+		long result5 = mm.min(5L, 3L); // 비교해서 작은 값 구하기 
+		long result6 = mm.max(5L, 3L); // 비교해서 큰 값 구하기
+
+		System.out.println("add(5L, 3L) = " + result1); // 8. result1값(8)이 출력 됨
+		System.out.println("subtract(5L, 3L) = " + result2);
+		System.out.println("multiply(5L, 3L) = " + result3);
+		System.out.println("divide(5L, 3L) = " + result4);
+		System.out.println("min(5L, 3l) = "+result5); // 비교해서 작은 값 구하기 -> 3출력
+		System.out.println("max(5L, 3l) = "+result6); // 비교해서 큰 값 구하기 -> 5출력
+	}
+ }
+
+ class MyMath { // 1.MyMath 클래스 작성( 메서드 작성 ) / 메서드는 클래스 영역에만 정의 가능
+	long add(long a, long b) { // 4.위에 add 메서드 복사해옴 long 5L, long 3L
+		long result = a + b; // 5.5 + 3 = 8; 8값을 result 저장
+		return result; // 6.작업을 마친 result 값을 호출한 곳 (add메서드로 다시 보냄)
+	//	return a + b;	// 위의 두 줄을 이와 같이 한 줄로 간단히 할 수 있다.
+	}
+	long subtract(long a, long b) { return a - b; }
+	long multiply(long a, long b) { return a * b; }
+	long min(long a, long b) { return a < b ? a : b;} // 삼항연산자사용 ( 작은 값 구하기 ) 
+	long max(long a, long b) { // if문 사용 ( 큰 값 구하기 ) 
+		long result = 0;
+		if (a>b) {
+			result = a;
+		}else {
+			result = b;
+		}
+		return result;
+	}
+	double divide(double a, double b) {
+		return a / b;
+	}
+ }
+ 
+//결과 
+// add(5L, 3L) = 8
+//		 subtract(5L, 3L) = 2
+//		 multiply(5L, 3L) = 15
+//		 divide(5L, 3L) = 1.6666666666666667
