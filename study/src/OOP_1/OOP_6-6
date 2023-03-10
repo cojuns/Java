@@ -1,0 +1,26 @@
+class Data { int x; }//3. Data 클래스 메모리 로드
+// 변수의 값을 읽기만 가능 
+class Ex6_6 {// 1. 클래스 메모리 로드
+	public static void main(String[] args) {//2. main 메서드 스택 호출 프로그램 시작
+		//4. Data타입의 참조변수 d가 main메서드의 지역변수로 생성
+		Data d = new Data();//5. Data클래스의 인스턴스가 생성, 생성된 인스턴스의 주소가 참조변수 d에 저장  main(d:0x100)→Data인스턴스(0x100)(x=0)
+		d.x = 10;//6. 참조변수 d가 가리키고 있는 인스턴스의 멤버변수 x에 10을 저장 main(d:0x100)→Data인스턴스(0x100)(10)
+		System.out.println("main() : x = " + d.x);//7. println메서드를 호출(스택에 쌓고) d.x값(10) 출력 후 스택에서 제거
+
+		change(d.x);//8.change메서드 호출(스택에 쌓고) 참조변수 d가 가리키고 있는 인스턴스의 멤버변수 x(d.x)의 값을 넘겨준다.
+		//12.  main 메서드로 돌아가 change를 호출한 다음 문장이 수행
+		System.out.println("After change(d.x)");//13. s.o.p("After change(d.x)"); 스택에 쌓고 After change(d.x) 출력 후 스택에서 제거
+		System.out.println("main() : x = " + d.x);//14. s.o.p("main() : x="+d.x); 스택에 쌓고 main() : x= 10 출력 후 스택에서 제거 
+		//15. main 메서드의 마지막 문장까지 수행 완료 main메서드가 종료되고 동시에 프로그램 종료
+	}
+
+	static void change(int x) {  // 기본형 매개변수 //9.  d.x의 값인 10이 change의 매개변수 x에 복사 change(x=10) ( int x ) 기본형 매개변수
+		x = 1000;//10. change메서드의 지역변수 x에 1000을 저장 change(x=10)→change(x=1000)
+		System.out.println("change() : x = " + x);// 11.  println메서드를 호출(스택에 쌓고) x값(1000) 출력 후 스택에서 제거 후 change메서드가 사용하던 스택 제거
+	}
+}
+//결과
+//main() : x = 10
+//change() : x = 1000
+//After change(d.x)
+//main() : x = 10
