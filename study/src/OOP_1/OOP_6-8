@@ -1,0 +1,24 @@
+class Data3 { int x; }//3. Data3 클래스 메모리 로드
+
+class Ex6_8 {//1. Ex6_8 클래스 메모리 로드
+	public static void main(String[] args) {//2. main메서드 스택에 쌓고 호출 프로그램 시작
+		Data3 d = new Data3();//4. Data3타입의 참조변수 d가 main메서드의 지역변수로 생성
+		//5. Data클래스의 인스턴스가 생성, 생성된 인스턴스의 주소가 참조변수 d에 저장  main(d:0x100)→﻿Data3인스턴스(0x100)(x=0)
+		d.x = 10;//6. 참조변수 d가 가리키고 있는 인스턴스의 멤버변수 x에 10을 저장 main(d:0x100)→Data3인스턴스(0x100)(x=10)
+		System.out.println("main() : x = " + d.x);//7. println메서드를 호출(스택에 쌓고) d.x값(10) 출력 후 스택에서 제거
+		
+		Data3 d2 = copy(d);//8. Data3타입의 참조변수 d2가 main메서드의 지역변수로 생성 / copy메서드가 main메서드 지역변수 d를 참조(main d(0x100)→copy d(0x100) 복사
+		//14. tmp(0x200)→Data3(0x200)(x=10) -> d2(0x200)→Data3(0x200)(x=10)
+		System.out.println("d.x ="+d.x);
+		System.out.println("d2.x="+d2.x);
+	}
+	//참조형 반환타입이기 때문에 객체의 주소를 반환
+	static Data3 copy(Data3 d) { //9. copy메서드 호출(스택에 쌓고) 참조형 copy메서드안에 참조형 d가 생성 / 위에 복사된 값을 받아와서 ( copy d(0x100)(x=10)이 됨 ) 
+		Data3 tmp = new Data3();    //10. copy메서드 스택 안에 tmp 생성 후 새로운 인스턴스 생성 Data3(0x200)(x=0) / tmp(0x200)→Data3(0x200)(x=0)
+
+		tmp.x = d.x;  //11. d.x의 값을 tmp.x에 복사한다. copy d(0x100)(x=10) → tmp(0x200)→Data3(0x200)(x=0) = tmp(0x200)→Data3(0x200)(x=10)
+
+		return tmp;   //12. 복사한 객체의 주소를 반환한다. tmp(0x200)→Data3 d2 반환
+		////13. 반환 완료 후 copy메서드 종료 스택( 지역변수, 인스턴스 )에서 사라짐  
+	}
+}
