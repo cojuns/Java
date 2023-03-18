@@ -1,0 +1,36 @@
+class MyPoint3 {
+	int x;
+	int y;
+	
+	MyPoint3(int x, int y){ // 생성자
+		this.x = x;
+		this.y = y;
+	}
+	
+	// Object클래스의 toString()을 오버라이딩
+	public String toString() {
+		return "x:"+x+",y:"+y;
+	}
+}
+
+
+public class OverrideTest {
+	public static void main(String[] args) {
+		MyPoint3 p = new MyPoint3(3,5); //해당 처럼 사용시 생성자 필요 
+		System.out.println(p);
+		
+// 위에 밑에 똑같음 위에꺼가 더 간편하고 코드 가독성이 높음
+		
+//		MyPoint3 p = new MyPoint3(;) // 해당처럼 사용시 생성자 필요 x
+//		p.x =3;
+//		p.y =5;
+//		System.out.println("p.x="+p.x);
+//		System.out.println("p.y="+p.y);
+		
+		
+		
+
+	}
+
+}
+
