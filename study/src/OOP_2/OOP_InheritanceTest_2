@@ -1,0 +1,43 @@
+class Mypoint extends Object { 
+	// extends Object 조상이 없는 클래스는 자동적으로 Object클래스를 상속
+	// extends Object 따로 작성을 안해도 자동적으로 생성 ( 모든 클래스의 조상 ) 
+	// 모든 클래스는 Object클래스에 정의된 11개 메서드 상속 조상이 있든 없든
+	int x;
+	int y;
+}
+//class Circle extends Mypoint { // 상속
+//	int r;
+//}
+
+class Circle extends Object{ // 포함
+	Mypoint p = new Mypoint(); // 참조변수의 초기화
+	int r;
+}
+
+public class InheritanceTest {
+
+	public static void main(String[] args) {
+		Circle c = new Circle();
+//		c.x = 1; // 상속
+//		c.y = 2;
+//		c.r = 3;
+//		System.out.println("c.x="+c.x);
+//		System.out.println("c.y="+c.y);
+//		System.out.println("c.r="+c.r);
+		
+//		c.p.x = 1; // 포함
+//		c.p.y = 2;
+//		c.r = 3;
+//		System.out.println("c.p.x="+c.p.x);
+//		System.out.println("c.p.y="+c.p.y);
+//		System.out.println("c.r="+c.r);
+		
+// c == c.toString() 출력이 같음 println에 참조변수를 출력하라고 하면 toString() 자동 호출 
+		System.out.println(c);// 출력-> Circle@15db9742
+		System.out.println(c.toString());// 출력-> Circle@15db9742
+											    //클래스이름@주소값? 객체마다 다르게 나옴
+		// Circle에 toString메서드가 없어도 에러 없이 호출 가능
+		// Object클래스에 정의된 11개 메서드가 상속 됫기 때문에 호출 가능 
+	}
+
+}
