@@ -1,0 +1,36 @@
+
+class Time {
+	// 범위의 데이터를 보호하기 위해 private 접근제어자 사용
+	private int hour; // 0~23 사이의 값을 가져야함 
+	private int minute; // 0~59 사이의 값을 가져야함
+	private int second; // 0~59 사이의 값을 가져야함
+	
+	// public 접근제어자 사용 ( 간접접근 허용 ) 
+	public void setHour(int hour) {
+		if(hour < 0 || hour > 23) return;
+		// true일때 값이 return 빠져 나감
+		// fales일때 밑에 hour로 값을 바꿈
+		
+// iv랑 lv랑 이름이 같기 때문에 this로 구별, 
+		this.hour = hour;// Time{int hour}=setHour(int hour) 대입
+		
+	}
+	// 값을 읽을 수 있게 메서드 작성
+	public int getHour() {return hour;};
+}
+
+public class TimeTest {
+	public static void main(String[] args) {
+		Time t = new Time();
+		
+		t.setHour(21); // setHour(int hour) 값 입력
+		System.out.println(t.getHour());
+		// -> 21 출력 ( 유효한 범위의 값 ) 
+
+		t.setHour(100); // setHour(int hour) 값 입력
+		System.out.println(t.getHour());
+		// -> 21 출력 ( 유효하지 않는 범위의 값 )
+		// 호출 했지만 범위를 넘는 값이기 때문에  if문에서 값이 빠져 나감
+	}
+
+}
