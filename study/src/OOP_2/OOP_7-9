@@ -59,7 +59,7 @@ class Buyer2 {			  // 5. 제품을 구매하는 고객 클래스
 		System.out.println("구입하신 제품은 " + itemList + "입니다.");
 	}
 }
-
+//
 class Ex7_9 {
 	public static void main(String args[]) {
 		Buyer2 b = new Buyer2();// cart[0x100] -> cart[0](null) -> cart[1](null).....cart[9](null)
