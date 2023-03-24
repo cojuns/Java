@@ -20,9 +20,10 @@ class Fighter extends Unit2 implements Fightable {
 	}
 	
 	// 싸울 수 있는 상대를 불러온다.
-	Fightable getFightable() {
+	Fightable getFightable() {// 애매하게 
+	// 반환타입이 Fightable일떄는 Fightable 인스턴스를 구현한 클래스의 객체를 반환한다.	
 		Fighter f = new Fighter();// Fighter를 생성해서 반환
-		return f;
+		return (Fightable)f;// 형변환 가능 하니까(Fightable) 생략 
 	}
 }
 
@@ -32,6 +33,7 @@ public class FighterTest {
 	public static void main(String[] args) {
 		
 		Fighter f = new Fighter();// Fighter는 전부 호출 가능
+		Fightable f2 = f.getFightable();// 위에 Fightable과 반환타입 일치시킴
 //		Unit2 f = new Fighter();// Unit2에는 attack()이 없음 호출 불가 
 //		Fightable f = new Fighter();// Fightable에는 stop()이 없음 호출 불가
 		f.move(100, 200);
