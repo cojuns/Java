@@ -1,0 +1,12 @@
+class Ex8_7 {
+	public static void main(String[] args) {
+		try {// Exception과 그 자손은 반든시 예외처리를 해줘야 한다. ( 필수 )
+			throw new Exception();// Exception 고의로 발생  
+		} catch(Exception e) {}
+	
+		// RuntimeException과 그 자손은 예외처리를 해주지 않아도 컴파일이 된다. ( 선택 ) 
+		throw new RuntimeException(); // 컴파일 에러는 없지만 예외가 발생하지 않는건 아님
+		
+	}
+
+}
