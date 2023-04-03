@@ -1,0 +1,57 @@
+import java.util.Objects;
+
+class Card {
+	String kind;
+	int number;
+
+	Card() {
+		this("SPADE", 1);
+	}
+
+	Card(String kind, int number) {
+		this.kind = kind;
+		this.number = number;
+	}
+	
+	// equals()를 오버라이딩하면 hashCode()도 오버라이딩 해야한다.
+	public int hashCode() {
+		return Objects.hash(kind, number);//  Objects 주의  Object 아님
+	}
+	
+	//equals 오버라이딩
+	public boolean equals(Object obj) {// 선언부가 일치해야되니 Object
+		if(!(obj instanceof Card))// 형변환 가능 여부 확인
+			return false;
+					
+		Card c = (Card)obj;// obj를 Card로 형변환
+		return this.kind.equals(c.kind) && this.number==c.number;
+		//kind가 String이니까 ==이 아니라 equals 사용
+	}
+	
+	// Card iv값 이용해서 문자열로 만듬
+	// Object클래스의 toString()을 오버라이딩
+	public String toString() {
+		return "kind:"+kind+", number:"+number;
+	}
+	
+}
+
+class Ex9_4 {
+	public static void main(String[] args) {
+		Card c1 = new Card();
+		Card c2 = new Card();
+		
+		System.out.println(c1.equals(c2));
+
+		System.out.println(c1.toString());
+		System.out.println(c2.toString());
+		System.out.println(c1.hashCode());
+		System.out.println(c2.hashCode());
+	}
+}
+// 결과
+//true
+//kind:SPADE, number:1
+//kind:SPADE, number:1
+//-1842861219
+//-1842861219
